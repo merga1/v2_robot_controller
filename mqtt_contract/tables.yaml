@@ -1,0 +1,60 @@
+# Restaurant Delivery Robot - Table Coordinates Definition
+# Coordinate frame: map (ROS 2 Nav2 standard)
+# Units: meters for x & y, radians for yaw orientation
+
+home_dock:
+  x: 0.0
+  y: 0.0
+  yaw: 0.0
+
+tables:
+  1:
+    name: "Table 1"
+    x: 2.0
+    y: 1.5
+    yaw: 1.5708
+  2:
+    name: "Table 2"
+    x: 4.0
+    y: 1.5
+    yaw: 1.5708
+  3:
+    name: "Table 3"
+    x: 6.0
+    y: 1.5
+    yaw: 1.5708
+  4:
+    name: "Table 4"
+    x: 8.0
+    y: 1.5
+    yaw: 1.5708
+  5:
+    name: "Table 5"
+    x: 2.0
+    y: 4.5
+    yaw: -1.5708
+  6:
+    name: "Table 6"
+    x: 4.0
+    y: 4.5
+    yaw: -1.5708
+  7:
+    name: "Table 7"
+    x: 6.0
+    y: 4.5
+    yaw: -1.5708
+  8:
+    name: "Table 8"
+    x: 8.0
+    y: 4.5
+    yaw: -1.5708
+  9:
+    name: "Table 9 - VIP"
+    x: 10.0
+    y: 3.0
+    yaw: 3.1415
+  10:
+    name: "Table 10 - Bar"
+    x: 0.5
+    y: 3.0
+    yaw: 0.0

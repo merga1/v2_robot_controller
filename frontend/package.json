@@ -1,0 +1,39 @@
+{
+  "name": "frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:portal": "vite --port 5173 --host 0.0.0.0",
+    "dev:guest": "vite apps/guest-menu --port 5174 --host 0.0.0.0",
+    "dev:kitchen": "vite apps/kitchen-board --port 5175 --host 0.0.0.0",
+    "dev:chef": "vite apps/chef-pass --port 5176 --host 0.0.0.0",
+    "dev:robot": "vite apps/robot-screen --port 5177 --host 0.0.0.0",
+    "dev:admin": "vite apps/admin-dashboard --port 5178 --host 0.0.0.0",
+    "dev:all": "concurrently -n \"GUEST:5174,KITCHEN:5175,CHEF:5176,ROBOT:5177,ADMIN:5178,PORTAL:5173\" -c \"bgYellow.black,bgBlue.white,bgGreen.black,bgMagenta.white,bgRed.white,bgCyan.black\" \"npm run dev:guest\" \"npm run dev:kitchen\" \"npm run dev:chef\" \"npm run dev:robot\" \"npm run dev:admin\" \"npm run dev:portal\"",
+    "build": "vite build",
+    "build:guest": "vite build apps/guest-menu",
+    "build:kitchen": "vite build apps/kitchen-board",
+    "build:chef": "vite build apps/chef-pass",
+    "build:robot": "vite build apps/robot-screen",
+    "build:admin": "vite build apps/admin-dashboard",
+    "build:all": "npm run build:guest && npm run build:kitchen && npm run build:chef && npm run build:robot && npm run build:admin",
+    "lint": "oxlint",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "canvas-confetti": "^1.9.4",
+    "lucide-react": "^1.59.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "concurrently": "^10.0.6",
+    "oxlint": "^1.81.0",
+    "vite": "^8.3.0"
+  }
+}
